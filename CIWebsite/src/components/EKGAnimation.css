@@ -1,0 +1,33 @@
+
+
+  .ekg {
+    fill: none;
+    stroke: #00d704;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: miter;
+    opacity: 0;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: ekg 1.5s linear forwards infinite;
+  }
+
+  @keyframes ekg {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      stroke-dashoffset: 2000;
+    }
+    99% {
+      opacity: 0;
+      stroke-dashoffset: 3000;
+    }
+    100% {
+      stroke-dashoffset: 1000;
+    }
+  }
+
