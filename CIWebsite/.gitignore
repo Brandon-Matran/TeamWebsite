@@ -1,0 +1,66 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.egg-info/
+*.egg
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.iml
+
+# C/C++
+*.o
+*.out
+*.exe
+
+# Ruby
+*.gem
+*.rbc
+vendor/
+
+# PHP
+vendor/
+composer.lock
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Build directories
+build/
+dist/
+
+# Miscellaneous
+*.lock
+*.cache
+*.tmp
+*.bak
+*.orig
+
+# Custom
+# Add any other files or directories that should be ignored below
