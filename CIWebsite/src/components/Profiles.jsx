@@ -4,7 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 function Profiles() {
   return (
-    <div className="flex flex-col justify-center items-center" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+    <div className="flex flex-col justify-center items-center" style={{ fontFamily: 'Montserrat, sans-serif'}}>
       <div className="flex m-8 justify-between items-center w-full"> {/* Flex container for alignment */}
         <div style={{ flex: 1, textAlign: 'center' }}> {/* Center the typing animation */}
           <TypeAnimation
@@ -21,7 +21,7 @@ function Profiles() {
 
       </div>
 
-      <div className="w-full">
+      <div className="w-full" style={{}}>
         <Profile />
       </div>
     </div>

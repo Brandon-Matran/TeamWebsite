@@ -19,10 +19,11 @@ function Profile() {
     return (
       <div
         key={idx}
-        className="flex flex-col items-center p-4 shadow-md border border-white" // Ensure flex-col and center alignment
+        className="flex flex-col items-center p-4 shadow-md rounded-tl-3xl rounded-br-3xl" // Ensure flex-col and center alignment
         onClick={() => handleImageClick(team)}
         onMouseEnter={() => setHoveredIndex(idx)} // Set hovered index on mouse enter
         onMouseLeave={() => setHoveredIndex(null)} // Reset hovered index on mouse leave
+        style={{backgroundColor: "#ffffff"}}
       >
         <div className="relative"> {/* Wrapper for positioning */}
           <img
@@ -38,7 +39,7 @@ function Profile() {
           )}
         </div>
         <div className="text-center" > {/* Ensure text is centered */}
-          <div className="text-md font-semibold" style={{fontFamily: 'Montserrat, sans-serif'}}>{team.name}</div>
+          <div className="text-md font-semibold" style={{fontFamily: 'Montserrat, sans-serif', }}>{team.name}</div>
           <p className="" style={{fontFamily:'Monserrat, sans-serif', color: 'rgb(0 180 217)'}}>{team.role}</p>
         </div>
       </div>
@@ -46,7 +47,7 @@ function Profile() {
   });
 
   return (
-    <div className="flex w-full justify-evenly">
+    <div className="flex w-full justify-evenly" style={{}}>
       {teamData}
 
       {isModalOpen && (

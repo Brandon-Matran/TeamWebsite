@@ -1,0 +1,112 @@
+button {
+    all: unset;
+  }
+
+  .button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2.5rem;
+    border-radius: 9999px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 640;
+    color: #1d1d1f; /* Set text color */
+    letter-spacing: -0.06em;
+    overflow: hidden; /* To ensure the background layers stay inside the button */
+    background-color: rgba(255, 208, 116); /* Default background color */
+    cursor: pointer; /* Indicate it's clickable */
+  }
+
+  .button-inner,
+  .button-inner-hover,
+  .button-inner-static {
+    pointer-events: none;
+    display: block;
+  }
+
+  .button-inner {
+    position: relative;
+    z-index: 2; /* Ensure the text stays above the background layers */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for static text */
+  }
+
+  .button-inner-static {
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for static text */
+  }
+
+  .button-inner-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the hover text */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for hover text */
+  }
+
+  .button-bg {
+    overflow: hidden;
+    border-radius: 9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: scale(1);
+    transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .button-bg-layer {
+    border-radius: 9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .button-bg-layer.-purple {
+    background-color: rgba(163, 116, 255);
+  }
+
+  .button-bg-layer.-turquoise {
+    background-color: rgba(23, 241, 209);
+  }
+
+  .button-bg-layer.-yellow {
+    background-color: rgba(255, 208, 116);
+  }
+
+  .button:hover .button-inner-static {
+    opacity: 0; /* Hide static text on hover */
+  }
+
+  .button:hover .button-inner-hover {
+    opacity: 1; /* Show hover text */
+    transform: translate(-50%, -50%); /* Keep it centered */
+  }
+
+  .button:hover .button-bg-layer {
+    transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+  }
+
+  .button:hover .button-bg-layer-1 {
+    transform: scale(1);
+  }
+
+  .button:hover .button-bg-layer-2 {
+    transition-delay: 0.1s;
+    transform: scale(1);
+  }
+
+  .button:hover .button-bg-layer-3 {
+    transition-delay: 0.2s;
+    transform: scale(1);
+  }

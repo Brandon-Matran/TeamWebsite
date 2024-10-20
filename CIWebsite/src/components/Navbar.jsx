@@ -6,8 +6,8 @@ function Navbar() {
         <div>
             <div className="flex m-4 justify-between items-center">
                 <img className="h-24"src={VCHLogo} />
-                
-                <ul className="flex p-4">
+
+                <ul className="flex p-4 font-semibold">
                     <li className="p-4">About Us</li>
                     <li className="p-4">Milestones</li>
                     <li className="p-4">Memes</li>
